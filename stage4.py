@@ -20,5 +20,6 @@ print "After: " , convertedData['array'] , "\n"
 
 sending_payload = {'token' : '71e6c159c2ae38103a613a57b1fb7a06',
                    'array' : convertedData['array']}
-
-print requests.post(validateURL, data=sending_payload).text
+print type(convertedData['array'])
+r = requests.post(validateURL, json=sending_payload)
+print r.text
