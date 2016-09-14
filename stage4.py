@@ -7,7 +7,7 @@ query = {'token' : '71e6c159c2ae38103a613a57b1fb7a06'}
 
 recieving_payload = requests.post(dataURL, data=query)
 
-convertedData = recieving_payload.content
+convertedData = recieving_payload.content # converts string to dictionary
 
 convertedData = ast.literal_eval(convertedData)
 
